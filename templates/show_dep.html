@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>显示员工</title>
+</head>
+<body>
+{{ department.name }}
+<table>
+    <tr>
+        <td width="50">id</td>
+        <td width="150">姓名</td>
+        <td width="150">年龄</td>
+        <td width="150">性别</td>
+        <td width="150">薪资</td>
+        <td width="150">备注</td>
+
+
+    </tr>
+    {% for  e in employees %}
+        <tr>
+            <td>{{e.id}}</td>
+            <td>{{e.name }}</td>
+            <td>{{e.age}}</td>
+            <td>{{e.sex }}</td>
+            <td>{{e.salary }}</td>
+            <td>{{e.comment}}</td>
+
+        </tr>
+    {% endfor %}
+
+</table>
+</body>
+</html>

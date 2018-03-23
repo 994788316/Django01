@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>显示部门</title>
+</head>
+<body>
+<h3>部门信息</h3>
+<a href="/add_dep">新增</a>
+<table>
+    <tr>
+        <td width="50">id</td>
+        <td width="150">部门名称</td>
+        <td width="150">成立时间</td>
+
+    </tr>
+    {% for dep in deps %}
+        <tr>
+            <td>{{dep.id }}</td>
+            <td>{{dep.name }}</td>
+            <td>{{dep.create_date }}</td>
+            <td><a href="/del_dep/{{ dep.id }}">删除</a></td>
+            <td><a href="/show_dep/{{ dep.id }}">查看</a></td>
+
+
+        </tr>
+    {% endfor %}
+
+</table>
+</body>
+</html>
